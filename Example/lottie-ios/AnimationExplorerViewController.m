@@ -79,6 +79,10 @@ typedef enum : NSUInteger {
   self.slider.minimumValue = 0;
   self.slider.maximumValue = 1;
   [self.view addSubview:self.slider];
+    
+    if (self.preloadFileAtPath.length) {
+        [self _loadAnimationFromJSONfileAtPath:self.preloadFileAtPath];
+    }
 }
 
 - (void)resetAllButtons {
@@ -171,14 +175,37 @@ typedef enum : NSUInteger {
 
 - (void)_showJSONExplorer {
   JSONExplorerViewController *vc = [[JSONExplorerViewController alloc] init];
-  [vc setCompletionBlock:^(NSString *selectedAnimation) {
-    if (selectedAnimation) {
-      [self _loadAnimationNamed:selectedAnimation];
+  [vc setCompletionBlock:^(NSString *selectedAnimationPath) {
+    if (selectedAnimationPath) {
+        NSArray *components = [selectedAnimationPath componentsSeparatedByString:@"/"];
+        if ([components[components.count - 2] isEqualToString:@"Documents"]) {
+            [self _loadAnimationFromJSONfileAtPath:selectedAnimationPath];
+        } else {
+            [self _loadAnimationNamed:components.lastObject];
+        }
     }
     [self dismissViewControllerAnimated:YES completion:NULL];
   }];
   UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
   [self presentViewController:navController animated:YES completion:NULL];
+}
+
+- (void)_loadAnimationFromJSONfileAtPath:(NSString *)filePath {
+    [self.laAnimation removeFromSuperview];
+    self.laAnimation = nil;
+    [self resetAllButtons];
+
+    NSError *error;
+    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:filePath];
+    NSDictionary  *JSONObject = jsonData ? [NSJSONSerialization JSONObjectWithData:jsonData
+                                                                           options:0 error:&error] : nil;
+
+    if (JSONObject && !error) {
+        self.laAnimation = [LOTAnimationView animationFromJSON:JSONObject];
+        self.laAnimation.contentMode = UIViewContentModeScaleAspectFit;
+        [self.view addSubview:self.laAnimation];
+        [self.view setNeedsLayout];
+    }
 }
 
 - (void)_loadAnimationFromURLString:(NSString *)URL {

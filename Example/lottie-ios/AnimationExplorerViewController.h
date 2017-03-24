@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AnimationExplorerViewController : UIViewController
-
+@property (nonatomic, copy) NSString *preloadFileAtPath;
 @end

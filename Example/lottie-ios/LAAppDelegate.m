@@ -7,12 +7,39 @@
 //
 
 #import "LAAppDelegate.h"
+#import "AnimationExplorerViewController.h"
 
 @implementation LAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    if (url) {
+        if ([[url pathExtension] isEqualToString:@"json"]) {
+            NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+            NSString *inboxPath = [documentsDirectory stringByAppendingPathComponent:@"Inbox"];
+            NSString *sourceFilePath = [inboxPath stringByAppendingPathComponent:url.description.lastPathComponent];
+            NSString *destinationFilePath = [documentsDirectory stringByAppendingPathComponent:url.description.lastPathComponent];
+
+            // remove old file first
+            [[NSFileManager defaultManager] removeItemAtPath:destinationFilePath error:nil];
+            [[NSFileManager defaultManager] moveItemAtPath:sourceFilePath toPath:destinationFilePath error:nil];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                Class vcClass = NSClassFromString(@"AnimationExplorerViewController");
+                if (vcClass) {
+                    AnimationExplorerViewController *vc = [[vcClass alloc] init];
+                    vc.preloadFileAtPath = destinationFilePath;
+                    [self.window.rootViewController presentViewController:vc animated:YES completion:NULL];
+                }
+            });
+        }
+    }
     return YES;
 }
 

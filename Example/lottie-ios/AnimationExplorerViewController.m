@@ -23,6 +23,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) UIToolbar *toolbar;
 @property (nonatomic, strong) UISlider *slider;
 @property (nonatomic, strong) LOTAnimationView *laAnimation;
+@property (nonatomic, weak) UIBarButtonItem *playButton;
 
 @end
 
@@ -62,6 +63,7 @@ typedef enum : NSUInteger {
   UIBarButtonItem *openWeb = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(_showURLInput)];
   UIBarButtonItem *flx2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
   UIBarButtonItem *play = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(_play:)];
+    self.playButton = play;
   UIBarButtonItem *flx3 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
   UIBarButtonItem *loop = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(_loop:)];
   UIBarButtonItem *flx4 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
@@ -82,6 +84,14 @@ typedef enum : NSUInteger {
     
     if (self.preloadFileAtPath.length) {
         [self _loadAnimationFromJSONfileAtPath:self.preloadFileAtPath];
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if (self.showExplorerOnStart) {
+        self.showExplorerOnStart = NO;
+        [self _open:nil];
     }
 }
 
@@ -205,6 +215,7 @@ typedef enum : NSUInteger {
         self.laAnimation.contentMode = UIViewContentModeScaleAspectFit;
         [self.view addSubview:self.laAnimation];
         [self.view setNeedsLayout];
+        [self _play:self.playButton];
     }
 }
 

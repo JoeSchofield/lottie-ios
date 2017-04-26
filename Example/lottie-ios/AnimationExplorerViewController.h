@@ -10,4 +10,5 @@
 
 @interface AnimationExplorerViewController : UIViewController
 @property (nonatomic, copy) NSString *preloadFileAtPath;
+@property (nonatomic, assign) BOOL showExplorerOnStart;
 @end

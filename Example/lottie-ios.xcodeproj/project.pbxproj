@@ -68,6 +68,8 @@
 		62B254C91E3A90040035A842 /* vcTransition1.json in Resources */ = {isa = PBXBuildFile; fileRef = 62B2549F1E3A90040035A842 /* vcTransition1.json */; };
 		62B254CA1E3A90040035A842 /* vcTransition2.json in Resources */ = {isa = PBXBuildFile; fileRef = 62B254A01E3A90040035A842 /* vcTransition2.json */; };
 		62B254CB1E3A90040035A842 /* Watermelon.json in Resources */ = {isa = PBXBuildFile; fileRef = 62B254A11E3A90040035A842 /* Watermelon.json */; };
+		636CE11D1EB1442F00821A94 /* AirDropInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636CE11C1EB1442F00821A94 /* AirDropInfo.storyboard */; };
+		636CE1201EB1485D00821A94 /* AirDropInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CE11F1EB1485D00821A94 /* AirDropInfoViewController.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		B8E8748514D4FA9C683B1711 /* Pods_lottie_ios_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBDFEA18138A27DD5A89337 /* Pods_lottie_ios_Tests.framework */; };
@@ -170,6 +172,9 @@
 		62B2549F1E3A90040035A842 /* vcTransition1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = vcTransition1.json; path = Assets/vcTransition1.json; sourceTree = SOURCE_ROOT; };
 		62B254A01E3A90040035A842 /* vcTransition2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = vcTransition2.json; path = Assets/vcTransition2.json; sourceTree = SOURCE_ROOT; };
 		62B254A11E3A90040035A842 /* Watermelon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Watermelon.json; path = Assets/Watermelon.json; sourceTree = SOURCE_ROOT; };
+		636CE11C1EB1442F00821A94 /* AirDropInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AirDropInfo.storyboard; sourceTree = "<group>"; };
+		636CE11E1EB1485D00821A94 /* AirDropInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirDropInfoViewController.h; sourceTree = "<group>"; };
+		636CE11F1EB1485D00821A94 /* AirDropInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirDropInfoViewController.m; sourceTree = "<group>"; };
 		687661C57667AB2C5371F7BB /* Pods-Lottie-Example-MacOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottie-Example-MacOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lottie-Example-MacOS/Pods-Lottie-Example-MacOS.release.xcconfig"; sourceTree = "<group>"; };
 		6BC326E3835099034E161393 /* Pods-Lottie-Example-MacOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottie-Example-MacOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lottie-Example-MacOS/Pods-Lottie-Example-MacOS.debug.xcconfig"; sourceTree = "<group>"; };
 		6DC4D284D6109D58EE331F86 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -279,6 +284,9 @@
 			children = (
 				6003F59C195388D20070C39A /* LAAppDelegate.h */,
 				6003F59D195388D20070C39A /* LAAppDelegate.m */,
+				636CE11C1EB1442F00821A94 /* AirDropInfo.storyboard */,
+				636CE11E1EB1485D00821A94 /* AirDropInfoViewController.h */,
+				636CE11F1EB1485D00821A94 /* AirDropInfoViewController.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				62B254621E3A8D310035A842 /* LottieRootViewController.h */,
 				62B254631E3A8D310035A842 /* LottieRootViewController.m */,
@@ -577,6 +585,7 @@
 				62B254B71E3A90040035A842 /* I.json in Resources */,
 				62B254A81E3A90040035A842 /* MotionCorpse-Jrcanest.json in Resources */,
 				62B254BE1E3A90040035A842 /* P.json in Resources */,
+				636CE11D1EB1442F00821A94 /* AirDropInfo.storyboard in Resources */,
 				62B254C81E3A90040035A842 /* Z.json in Resources */,
 				62B254AC1E3A90040035A842 /* Apostrophe.json in Resources */,
 				62B254A41E3A90040035A842 /* IconTransitions.json in Resources */,
@@ -773,6 +782,7 @@
 				62B254731E3A8D3B0035A842 /* AnimatedTextField.m in Sources */,
 				62B2546C1E3A8D310035A842 /* AnimationTransitionViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				636CE1201EB1485D00821A94 /* AirDropInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

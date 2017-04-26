@@ -7,6 +7,8 @@
 //
 
 #import "LAAppDelegate.h"
+#import "LottieRootViewController.h"
+#import "AirDropInfoViewController.h"
 #import "AnimationExplorerViewController.h"
 
 @implementation LAAppDelegate
@@ -35,7 +37,21 @@
                 if (vcClass) {
                     AnimationExplorerViewController *vc = [[vcClass alloc] init];
                     vc.preloadFileAtPath = destinationFilePath;
-                    [self.window.rootViewController presentViewController:vc animated:YES completion:NULL];
+
+                    if ([self.window.rootViewController isKindOfClass:[AirDropInfoViewController class]]) {
+                        if (self.window.rootViewController.presentedViewController) {
+                            // if something to dismiss, then dismiss and present the new one
+                            [self.window.rootViewController dismissViewControllerAnimated:YES completion:^{
+                                [self.window.rootViewController presentViewController:vc animated:YES completion:NULL];
+                            }];
+                        } else {
+                            // otherwise, present
+                            [self.window.rootViewController presentViewController:vc animated:YES completion:NULL];
+                        }
+                    } else {
+                        // if something else is there, just replace the root with the AnimationExplorerViewController
+                        self.window.rootViewController = vc;
+                    }
                 }
             });
         }

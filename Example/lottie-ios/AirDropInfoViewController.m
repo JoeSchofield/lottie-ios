@@ -29,7 +29,6 @@
     self.lottieRect = self.lottieLabel.bounds;
     self.lottieLogo.frame = self.lottieRect;
     
-
     self.versionLabel.text = @"Using version 1.5.1";
     
     self.lottieLogo.animationProgress = 0;

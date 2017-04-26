@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zDr-ig-adO">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,64 +19,64 @@
                         <viewControllerLayoutGuide type="bottom" id="TUE-hA-wez"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lok-Gj-Od9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Air" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfa-7t-DFO">
-                                <rect key="frame" x="91" y="116" width="58" height="66"/>
+                                <rect key="frame" x="110.66666666666666" y="60" width="57.999999999999972" height="66"/>
                                 <color key="backgroundColor" red="0.0" green="0.81819665431976318" blue="0.75881737470626831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="26"/>
                                 <color key="textColor" red="7.6557971624424681e-06" green="0.47840315103530884" blue="0.5294988751411438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lottie" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7a-zE-Uvs">
-                                <rect key="frame" x="149" y="116" width="135" height="66"/>
+                                <rect key="frame" x="168.66666666666669" y="60" width="135.00000000000006" height="66"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animating your Lottie Animations via AirPlay since 2017." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpJ-lp-J8a">
-                                <rect key="frame" x="16" y="222" width="343" height="14.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AirPlaying your Lottie Animations since 2017." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpJ-lp-J8a">
+                                <rect key="frame" x="20" y="156" width="374" height="14.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share an animation at any time." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lj-1m-gdV">
-                                <rect key="frame" x="16" y="276.5" width="343" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AirPlay an animation from your Mac at any time!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lj-1m-gdV">
+                                <rect key="frame" x="20" y="200.66666666666666" width="374" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uoq-e2-inD">
-                                <rect key="frame" x="294" y="133" width="65" height="32"/>
+                                <rect key="frame" x="313.66666666666674" y="77" width="80.333333333333314" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="dJx-SI-soy"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rel-ha-CFZ">
-                                <rect key="frame" x="16" y="133" width="65" height="32"/>
+                                <rect key="frame" x="20" y="77" width="80.666666666666671" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="5rP-oz-jJr"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZ4-Ym-FO5">
-                                <rect key="frame" x="16" y="331" width="343" height="30"/>
+                                <rect key="frame" x="20" y="273.66666666666669" width="374" height="30"/>
                                 <state key="normal" title="View Previously Shared Animations and Examples"/>
                                 <connections>
                                     <action selector="tappedViewPrevious:" destination="zDr-ig-adO" eventType="touchUpInside" id="ymC-LU-Tta"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVq-CY-1iG">
-                                <rect key="frame" x="208" y="625" width="130" height="30"/>
+                                <rect key="frame" x="232.66666666666669" y="693.66666666666663" width="130.00000000000006" height="30"/>
                                 <state key="normal" title="Something Newer?"/>
                                 <connections>
                                     <action selector="tappedSomethingNewer:" destination="zDr-ig-adO" eventType="touchUpInside" id="hpc-Es-04X"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v1.1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtj-bS-oFz">
-                                <rect key="frame" x="177" y="632.5" width="21" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v1.5.1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtj-bS-oFz">
+                                <rect key="frame" x="191.66666666666666" y="701" width="31" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -88,7 +88,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="OZ4-Ym-FO5" secondAttribute="trailing" id="3xA-Cd-W8R"/>
                             <constraint firstItem="Uoq-e2-inD" firstAttribute="centerY" secondItem="V7a-zE-Uvs" secondAttribute="centerY" id="4vY-ba-udt"/>
                             <constraint firstItem="tVq-CY-1iG" firstAttribute="centerY" secondItem="Vtj-bS-oFz" secondAttribute="centerY" id="8Qj-Ci-J0Z"/>
-                            <constraint firstItem="rpJ-lp-J8a" firstAttribute="top" secondItem="Vfa-7t-DFO" secondAttribute="bottom" constant="40" id="GhN-UT-6By"/>
+                            <constraint firstItem="rpJ-lp-J8a" firstAttribute="top" secondItem="Vfa-7t-DFO" secondAttribute="bottom" constant="30" id="GhN-UT-6By"/>
                             <constraint firstItem="tVq-CY-1iG" firstAttribute="leading" secondItem="Vtj-bS-oFz" secondAttribute="trailing" constant="10" id="KJQ-LK-fGj"/>
                             <constraint firstItem="rpJ-lp-J8a" firstAttribute="leading" secondItem="Lok-Gj-Od9" secondAttribute="leadingMargin" id="V7V-yd-wIB"/>
                             <constraint firstItem="Uoq-e2-inD" firstAttribute="leading" secondItem="V7a-zE-Uvs" secondAttribute="trailing" constant="10" id="VEW-3d-zxx"/>
@@ -101,13 +101,13 @@
                             <constraint firstItem="V7a-zE-Uvs" firstAttribute="leading" secondItem="Vfa-7t-DFO" secondAttribute="trailing" id="k4l-cO-Kjg"/>
                             <constraint firstItem="Vtj-bS-oFz" firstAttribute="centerX" secondItem="Lok-Gj-Od9" secondAttribute="centerX" id="mFy-9E-XW2"/>
                             <constraint firstItem="OZ4-Ym-FO5" firstAttribute="leading" secondItem="Lok-Gj-Od9" secondAttribute="leadingMargin" id="orG-rQ-hgL"/>
-                            <constraint firstItem="1Lj-1m-gdV" firstAttribute="top" secondItem="rpJ-lp-J8a" secondAttribute="bottom" constant="40" id="ovj-IT-N8a"/>
+                            <constraint firstItem="1Lj-1m-gdV" firstAttribute="top" secondItem="rpJ-lp-J8a" secondAttribute="bottom" constant="30" id="ovj-IT-N8a"/>
                             <constraint firstItem="rel-ha-CFZ" firstAttribute="width" secondItem="Uoq-e2-inD" secondAttribute="width" id="rVP-WA-xp1"/>
-                            <constraint firstItem="V7a-zE-Uvs" firstAttribute="top" secondItem="AdU-nn-OGI" secondAttribute="bottom" constant="96" id="sGz-Tp-yqb"/>
+                            <constraint firstItem="V7a-zE-Uvs" firstAttribute="top" secondItem="AdU-nn-OGI" secondAttribute="bottom" constant="40" id="sGz-Tp-yqb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Uoq-e2-inD" secondAttribute="trailing" id="tZU-pv-1nJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="rel-ha-CFZ" secondAttribute="leading" id="vzA-h7-ZZz"/>
                             <constraint firstItem="Vfa-7t-DFO" firstAttribute="leading" secondItem="rel-ha-CFZ" secondAttribute="trailing" constant="10" id="wkX-rS-r0X"/>
-                            <constraint firstItem="OZ4-Ym-FO5" firstAttribute="top" secondItem="1Lj-1m-gdV" secondAttribute="bottom" constant="40" id="wxs-jH-22C"/>
+                            <constraint firstItem="OZ4-Ym-FO5" firstAttribute="top" secondItem="1Lj-1m-gdV" secondAttribute="bottom" constant="30" id="wxs-jH-22C"/>
                         </constraints>
                     </view>
                     <connections>

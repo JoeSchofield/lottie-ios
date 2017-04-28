@@ -7,6 +7,8 @@
 //
 
 #import "LAAppDelegate.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 #import "LottieRootViewController.h"
 #import "AirDropInfoViewController.h"
 #import "AnimationExplorerViewController.h"
@@ -15,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Fabric with:@[[Crashlytics class]]];
     // Override point for customization after application launch.
     return YES;
 }

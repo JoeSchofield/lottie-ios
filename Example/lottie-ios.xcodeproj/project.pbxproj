@@ -461,6 +461,7 @@
 				6003F588195388D20070C39A /* Resources */,
 				12F1E07C5E683E1EC036856C /* [CP] Embed Pods Frameworks */,
 				FDEA7632D2E2B3D469D7D710 /* [CP] Copy Pods Resources */,
+				638156931EB287B400E3FF35 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -523,7 +524,8 @@
 				ORGANIZATIONNAME = "Brandon Withrow";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = X34GKSR943;
+						DevelopmentTeam = A54W6VS795;
+						ProvisioningStyle = Manual;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -661,6 +663,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lottie-Example/Pods-Lottie-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		638156931EB287B400E3FF35 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" a9a1d60f1b788db506665b9f31ec2b0d91a9d87e 65a35104f1fb3da34f354662e924d9a8590305922c9cabdad7fbf53ec720c3b6";
 		};
 		64440AB7A58A1588DA997674 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -928,14 +943,17 @@
 			baseConfigurationReference = 99F3982078CC5B93DA1AFF47 /* Pods-Lottie-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X34GKSR943;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = A54W6VS795;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "lottie-ios/lottie-ios-Prefix.pch";
 				INFOPLIST_FILE = "lottie-ios/lottie-ios-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theRocketScienceGroup.mailChimp-enterprise.airLottie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "40729179-6c74-421f-88eb-f331ec7fa3c2";
+				PROVISIONING_PROFILE_SPECIFIER = "Air Lottie Development Profile";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -945,14 +963,17 @@
 			baseConfigurationReference = D8C83F4B06A893EA3322E53A /* Pods-Lottie-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X34GKSR943;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = A54W6VS795;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "lottie-ios/lottie-ios-Prefix.pch";
 				INFOPLIST_FILE = "lottie-ios/lottie-ios-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theRocketScienceGroup.mailChimp-enterprise.airLottie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2dcd1149-3e39-4ec8-a45d-fcd6eff21b19";
+				PROVISIONING_PROFILE_SPECIFIER = "AirLottie Enterprise Distribution Profile";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

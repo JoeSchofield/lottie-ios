@@ -8,6 +8,7 @@
 
 #import "AnimationExplorerViewController.h"
 #import "JSONExplorerViewController.h"
+#import "LAQRScannerViewController.h"
 #import <Lottie/Lottie.h>
 
 typedef enum : NSUInteger {
@@ -158,6 +159,17 @@ typedef enum : NSUInteger {
 }
 
 - (void)_showURLInput {
+  LAQRScannerViewController *qrVC = [[LAQRScannerViewController alloc] init];
+  [qrVC setCompletionBlock:^(NSString *selectedAnimation) {
+    if (selectedAnimation) {
+      [self _loadAnimationFromURLString:selectedAnimation];
+    }
+    [self dismissViewControllerAnimated:YES completion:NULL];
+  }];
+  UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:qrVC];
+  [self presentViewController:nav animated:YES completion:NULL];
+  return;
+  
   UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Load From URL"
                                                                  message:NULL
                                                           preferredStyle:UIAlertControllerStyleAlert];
@@ -250,12 +262,19 @@ typedef enum : NSUInteger {
     [self resetButton:button highlighted:NO];
     [self.laAnimation pause];
   } else {
+    
+    CADisplayLink *displayLink =[CADisplayLink displayLinkWithTarget:self selector:@selector(_updateSlider)] ;
+    [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
     [self resetButton:button highlighted:YES];
     [self.laAnimation playWithCompletion:^(BOOL animationFinished) {
-      self.slider.value = self.laAnimation.animationProgress;
+      [displayLink invalidate];
       [self resetButton:button highlighted:NO];
     }];
   }
+}
+
+- (void)_updateSlider {
+  self.slider.value = self.laAnimation.animationProgress;
 }
 
 - (void)_loop:(UIBarButtonItem *)button {

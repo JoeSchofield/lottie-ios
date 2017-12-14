@@ -1,8 +1,8 @@
 PODS:
-  - Crashlytics (3.8.4):
-    - Fabric (~> 1.6.3)
-  - Fabric (1.6.11)
-  - lottie-ios (1.5.1)
+  - Crashlytics (3.9.3):
+    - Fabric (~> 1.7.2)
+  - Fabric (1.7.2)
+  - lottie-ios (2.1.4)
 
 DEPENDENCIES:
   - Crashlytics
@@ -14,10 +14,10 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
-  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
-  lottie-ios: f680a7c4cb7a567ecf258fde0f967913aff111b8
+  Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
+  Fabric: 9cd6a848efcf1b8b07497e0b6a2e7d336353ba15
+  lottie-ios: 94fa2d82547ce3adf1e61157653ba99999fd279f
 
-PODFILE CHECKSUM: 4b7e3598cdd56f0363625a08d6ef7d68b9c265a2
+PODFILE CHECKSUM: f07f2678cbc552eb988f4d306480f7eee08b8200
 
 COCOAPODS: 1.2.0
